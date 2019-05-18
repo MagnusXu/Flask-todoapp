@@ -391,8 +391,7 @@ Now, let’s see how we can add a register route in the “modules/controllers/u
 > from app.schemas import validate_user
 Then define the route like this. Basically we just moved the POST method of previously written user route in a separate route.
 At first, we check if the received data is valid & in required format. If yes, we go on encrypting the password using flask_bcrypt object we created in app.py file. And then we store the data in our database. If there are any error with the request object, we respond the request with bad request parameters message.
-Now, let’s create a auth route, which will be called the very first time to generate the JSON token. So, the basic pipeline will be something like this.
-[image:D180F34D-3689-424C-9174-366C3B12EFB6-98374-000C758004BCD17C/0*j4WMVK8Kq0vdV0te.png]
+Now, let’s create a auth route, which will be called the very first time to generate the JSON token. 
 Reference: [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction/)
 In our case, ‘/auth’ will be the login route. We will create a JWT and return that to the browser. Now, on all the subsequent requests, we will check if the same JWT exists in the Authorization header of the request. The ‘/auth’ route will be something like this:
 ```
@@ -413,11 +412,7 @@ This route will first validate the data. Then see if the user with given usernam
 
 To start the web server, run the docker compose command with build argument.
 > docker-compose up —build
-### Validation Result
-**Registering User**
-[image:D73CD5FB-CE33-466B-A3A4-95408BEE9490-98374-000C75A83161BE93/1*2HjoJXhltvBQw4jjXiE9EQ.png]
-**Authenticating User**
-[image:C716C345-308A-4CAC-AD90-594C46AEF486-98374-000C75ACFC8DD743/1*uAQF3q6jse2Z6IIywVTNbw.png]
+
 ## How to Run
 ### Install the npm dependencies
 `yarn install`
