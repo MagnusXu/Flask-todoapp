@@ -304,15 +304,7 @@ Docker takes the python:3.4 image **FROM** docker repository, **ADD** every file
 Then, in the docker-compose file, we define a new service called mongoDB. And we add the additional flask_pymongo dependency in requirements.txt file.
 Start the app using docker-compose command.
 > docker-compose up —build
-### API Request & Response Result
-**POST**
-[image:4983243D-6ECD-4294-8829-12D348AAEAE0-98374-000C73DBBF35A799/1*qSmqMkbIp3RIlyajGz_EtQ.png]
-**GET**
-[image:7BA03871-BD1B-4A9B-801C-FB66D238F22D-98374-000C73E0CB4D29B5/1*s-m9YgnvrAhlbo3qraPUCQ.png]
-**PATCH**
-[image:35BF21E1-7DDD-4697-A09E-1E758858E9A8-98374-000C73E3CF104A77/1*oDm4z2hbB0f7w1uiyOgo5g.png]
-**DELETE**
-[image:9DBA55A7-EBC4-4951-80FD-7393D032AA42-98374-000C73E64B3733BC/1*huokSCYCQXloigDd8e8f9g.png]
+
 ## Security Improvement
 > JSON Web Token (JWT) is an open standard ( [RFC 7519](https://tools.ietf.org/html/rfc7519) ) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the**HMAC**algorithm) or a public/private key pair using**RSA**or**ECDSA**.
 Reference: [JSON Web Token Introduction - jwt.io](https://jwt.io/introduction/)
